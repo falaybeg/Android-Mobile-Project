@@ -19,7 +19,6 @@ public class Database extends SQLiteOpenHelper {
     private final String COL_EMAIL = "Email";
     private final String COL_PASSWORD="Password";
 
-
     private static final String TABLE_BILGI ="Bilgiler";
     private final String COL_uID = "Id";
     private final String COL_NAME = "Name";
@@ -27,18 +26,14 @@ public class Database extends SQLiteOpenHelper {
     private final String COL_YAS="Yas";
     private final String COL_CINSIYET="Cinsiyet";
 
-
     public Database(Context context)
     {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
 
-
-
     @Override
     public void onCreate(SQLiteDatabase db) {
-
 
         String tablo = "CREATE TABLE "+TABLE_NAME +
                 "("+COL_ID+" INTEGER PRIMARY KEY, " +
@@ -79,19 +74,16 @@ public class Database extends SQLiteOpenHelper {
         db.close();
 
         return control;
-
     }
 
     public void UpdateUser(String name, String surname, String yas)
     {
-
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues value = new ContentValues();
         value.put(COL_NAME, name);
         value.put(COL_SURNAME, surname);
         value.put(COL_YAS, yas);
-
 
         db.insert(TABLE_BILGI,null, value);
         db.close();

@@ -38,7 +38,6 @@ public class UserrActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +46,6 @@ public class UserrActivity extends AppCompatActivity {
                 final String Surname      =editSurname.getText().toString();
                 final String Age          =editAge.getText().toString();
                 String DisplayName  =(editName.getText().toString()+editSurname.getText().toString());
-
 
                 if(Name.isEmpty()){
                     editName.setError("İsim alanı boş !");
@@ -69,9 +67,7 @@ public class UserrActivity extends AppCompatActivity {
                 Database db = new Database(getApplicationContext());
                 db.UpdateUser(Name,Surname,Age);
 
-
                 if(User!=null){
-
 
                     UserProfileChangeRequest profile = new UserProfileChangeRequest.Builder()
                             .setDisplayName(DisplayName)
@@ -87,15 +83,11 @@ public class UserrActivity extends AppCompatActivity {
                                         Intent home=new Intent(UserrActivity.this,HomeActivity.class);
                                         Toast.makeText(getApplicationContext(), "SQLite Profil Guncelleme işlemi başarılı...", Toast.LENGTH_SHORT).show();
                                         startActivity(home);
-
                                     }
                                 }
                             });
                 }
             }
         });
-
-
-
     }
 }

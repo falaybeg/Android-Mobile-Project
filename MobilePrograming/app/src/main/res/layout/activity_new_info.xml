@@ -103,7 +103,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="Nikola Tesla                                     (10 Temmuz 1856 – 7 Ocak 1943), Sırp asıllı Amerikalı mucit, fizikçi ve elektrofizik uzmanıdır."
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
