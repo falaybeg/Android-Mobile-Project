@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "498262133750",
+    "firebase_url": "https://myauth-248d1.firebaseio.com",
+    "project_id": "myauth-248d1",
+    "storage_bucket": "myauth-248d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498262133750:android:994030a1e115a4cb",
+        "android_client_info": {
+          "package_name": "com.example.mehmethan.denemelogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498262133750-u9618h2nrsbvilkbaeti280otsjgicgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mehmethan.denemelogin",
+            "certificate_hash": "b5609ff8a499518ed5bb328989b9d69a78970a2f"
+          }
+        },
+        {
+          "client_id": "498262133750-q8gc8cgqp9rt26ohclvul7tj1tj36s4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcQTo596Um5nukOpUncxAxCVOAyfWonjQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498262133750-q8gc8cgqp9rt26ohclvul7tj1tj36s4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
