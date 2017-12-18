@@ -40,12 +40,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         mAuth = FirebaseAuth.getInstance();
     }
 
+    // kullanici kaydi yapan metod
     private void registerUser(){
 
         final String uName    =userMail.getText().toString().trim();
         final String pass     =userPass.getText().toString().trim();
         String repass   =userPasRep.getText().toString().trim();
 
+        // kullanici kayit validation islemleri
         if(uName.isEmpty()){
             userMail.setError("Eposta adresi boş !");
             userMail.requestFocus();
@@ -72,18 +74,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(uName,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        // Firebase ve SQLite nesneleri olusturuyoruz.
+
+                mAuth.createUserWithEmailAndPassword(uName,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-
-
                 Database db = new Database(getApplicationContext());
 
+                // burda eger kayit islemi basarili ise yapilacak islemleri yaziyoruz
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"Kullanıcı Kaydı Başarılı",Toast.LENGTH_SHORT).show();
                     Intent intent1=new Intent(RegisterActivity.this,UserrActivity.class);
                     intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
+                    // burda ekledigimiz kisinin ID'sini aliyoruz eger -1 ise kayit hayati olustu hatasi veriyor
                    long id = db.InsertUser(uName,pass);
                     if(id == -1)
                     {

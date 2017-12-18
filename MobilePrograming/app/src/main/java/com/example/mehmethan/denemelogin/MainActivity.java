@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnAddLogin).setOnClickListener(this);
 
     }
+
+    // Login isleminde Validation kontrolleri
     private void userLogin() {
 
         String uName    =edtUserName.getText().toString().trim();
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-
+        // Firebase"e email ve sifre ile giris islemi
         mAuth.signInWithEmailAndPassword(uName,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    // burdada tikladigimiz buton islemi
     @Override
     public void onClick(View view) {
 

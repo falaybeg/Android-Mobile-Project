@@ -34,12 +34,14 @@ public class ListActivity extends AppCompatActivity {
         onayla = (Button) findViewById(R.id.onayla);
 
 
+        // kullanicinin sectigi aktiviteli check olarak getiriyoruz
         dolu1.setChecked(true);
         dolu2.setChecked(true);
         dolu3.setChecked(true);
         dolu4.setChecked(true);
         dolu5.setChecked(true);
 
+        // Aktivite turunu seciyoruz.
         List<String> spinnerArray =  new ArrayList<String>();
         spinnerArray.add("Etkinlik seçiniz..");
         spinnerArray.add("Hafta İçi");
@@ -53,6 +55,7 @@ public class ListActivity extends AppCompatActivity {
         sItems.setAdapter(adapter);
 
 
+        // Aktivite islemlerini duzenliyiceksek
         duzenle.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -76,6 +79,7 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
+        // Duzenlenen aktiviteleri onaylama islemi
         onayla.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

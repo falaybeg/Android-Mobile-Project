@@ -24,6 +24,7 @@ public class QuizActivity extends AppCompatActivity {
         A2 = (Button) findViewById(R.id.A2);
         int sayac=0;
 
+        // Quiz Ekraninda Dogru soru sectiginde ekran kapaniyor ve Aktivite Listesi ekrani geliyor
         C1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

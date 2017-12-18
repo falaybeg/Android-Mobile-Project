@@ -20,6 +20,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
+        // Gecerli aktiviteleri ekrani acilir
         activitySec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        // Yeni Aktivite eklemek istedigimizde ekran acilir
         activityEkle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -35,11 +35,13 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
+        // Kullanici Email ve Sifresini kaydettigimiz Tablo
         String tablo = "CREATE TABLE "+TABLE_NAME +
                 "("+COL_ID+" INTEGER PRIMARY KEY, " +
                 COL_EMAIL+" TEXT NOT NULL,"+
                 COL_PASSWORD+" TEXT NOT NULL)";
 
+        // Kullanici Kisisel Bilgileri Tablosu
         String tablo2 = "CREATE TABLE "+TABLE_BILGI +
                 "("+COL_uID+" INTEGER PRIMARY KEY, " +
                 COL_NAME+" TEXT NOT NULL,"+
@@ -62,8 +64,10 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    // Email ve Sifre ile yeni kullanici kaydi
     public long InsertUser(String email, String password)
     {
+
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues value = new ContentValues();
@@ -76,6 +80,7 @@ public class Database extends SQLiteOpenHelper {
         return control;
     }
 
+    // Kullanici Profil Guncelleme Islemi
     public void UpdateUser(String name, String surname, String yas)
     {
         SQLiteDatabase db = this.getWritableDatabase();

@@ -27,9 +27,6 @@ public KullaniciBilgi()
         setPassword(password);
     }
 
-
-
-
     // Register Information
     public void setEmail(String email)
     {

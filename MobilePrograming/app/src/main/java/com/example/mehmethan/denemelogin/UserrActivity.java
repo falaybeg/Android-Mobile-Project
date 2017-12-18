@@ -47,6 +47,7 @@ public class UserrActivity extends AppCompatActivity {
                 final String Age          =editAge.getText().toString();
                 String DisplayName  =(editName.getText().toString()+editSurname.getText().toString());
 
+                // Kullanici kisisel bilgilerini guncelleme validation islemleri
                 if(Name.isEmpty()){
                     editName.setError("İsim alanı boş !");
                     editName.requestFocus();
@@ -63,10 +64,12 @@ public class UserrActivity extends AppCompatActivity {
                     return;
                 }
 
+                // Firebase ve SQLite nesnesi olusturuyoruz.
                 FirebaseUser User = mAuth.getCurrentUser();
                 Database db = new Database(getApplicationContext());
                 db.UpdateUser(Name,Surname,Age);
 
+                // Eger nesne null degilse kaydetme islemi yapiyoruz.
                 if(User!=null){
 
                     UserProfileChangeRequest profile = new UserProfileChangeRequest.Builder()

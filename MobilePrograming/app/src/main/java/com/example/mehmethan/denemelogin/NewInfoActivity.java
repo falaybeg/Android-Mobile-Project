@@ -18,6 +18,7 @@ public class NewInfoActivity extends AppCompatActivity {
         setTitle("Bunlari Biliyor Musunuz ?");
 
 
+        // Bunlari biliyor musunuz ekrani 5 saniye sonra kapaniyor
         int timeout = 5000;
 
         Timer timer = new Timer();

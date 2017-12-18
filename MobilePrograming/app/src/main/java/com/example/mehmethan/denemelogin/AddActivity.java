@@ -24,6 +24,7 @@ public class AddActivity extends AppCompatActivity {
         ekle = (Button) findViewById(R.id.newAdd);
         yeni = (EditText) findViewById(R.id.aktiviteAdi);
 
+        // yeni aktivite kaydet buttonu
         ekle.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -37,6 +38,7 @@ public class AddActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    // aktivite EditText bos degilse yeni aktivite olusturuluyor
                     Toast.makeText(AddActivity.this, "Yeni aktivite başarıyla kaydedildi !", Toast.LENGTH_SHORT).show();
 
                     int timeout = 3000; // make the activity visible for 4 seconds
